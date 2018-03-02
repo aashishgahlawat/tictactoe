@@ -97,7 +97,6 @@ class App extends Component {
 
     if(this.gameState.turn === 'O' && !this.gameState.gameEnded) {
       this.gameState.gameLocked = true;
-      setTimeout(()=> {
       if(diff==="easy" || item==="error"){
         do {
           var random = Math.floor(Math.random()*9);
@@ -108,7 +107,6 @@ class App extends Component {
           random=item;
         }
         this.clicked(document.querySelectorAll('.square')[random]);
-      }, 600);
     }
   }
 
